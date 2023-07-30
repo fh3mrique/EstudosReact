@@ -16,6 +16,9 @@ const Eventos = () => {
             <p>Clique em mim para disparar um evento no console</p>
             <button onClick={handleMeuEvento}>CLICK</button>
         </div>
+        <div>
+            <button onClick={() => console.log("Funçao inline chamada")}>INLINE</button>
+        </div>
     </div>
   )
 }
