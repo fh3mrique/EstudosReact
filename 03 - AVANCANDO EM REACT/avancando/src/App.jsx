@@ -8,6 +8,10 @@ function App() {
   return (
     <>
       <h1>Avançando em React</h1>
+      {/* Iamgens em public */}
+      <div>
+        <img src="/punpun.jpg" alt="" />
+      </div>
     </>
   )
 }
