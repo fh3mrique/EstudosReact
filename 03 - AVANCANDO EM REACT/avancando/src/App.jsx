@@ -2,6 +2,7 @@
 import './App.css'
 
 import kokouNoHitoImg from "./assets/kokou.jpg"
+import ManipularDados from './components/ManipularDados'
 
 function App() {
  
@@ -19,6 +20,8 @@ function App() {
           <h5>imagens em assets</h5>
          <img src={kokouNoHitoImg} alt="" />
       </div>
+
+      <ManipularDados/>
     </>
   )
 }
