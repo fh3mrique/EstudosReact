@@ -4,6 +4,7 @@ import './App.css'
 import kokouNoHitoImg from "./assets/kokou.jpg"
 import ManipularDados from './components/ManipularDados'
 import RenderLista from './components/RenderLista'
+import RenderizacaoCondicional from './components/RenderizacaoCondicional'
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
 
       <ManipularDados/>
       <RenderLista/>
+      <RenderizacaoCondicional/>
     </>
   )
 }
