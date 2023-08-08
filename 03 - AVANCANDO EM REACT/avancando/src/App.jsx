@@ -2,6 +2,7 @@
 import './App.css'
 
 import kokouNoHitoImg from "./assets/kokou.jpg"
+import DetalhesCarro from './components/DetalhesCarro'
 import ManipularDados from './components/ManipularDados'
 import MostrarNomeUsuario from './components/MostrarNomeUsuario'
 import RenderLista from './components/RenderLista'
@@ -27,7 +28,10 @@ function App() {
       <ManipularDados/>
       <RenderLista/>
       <RenderizacaoCondicional/>
+      {/* Props */}
       <MostrarNomeUsuario nome = "Filipe"/>
+      {/* Destructuring props */}
+      <DetalhesCarro marca = "Dodge ram" preco = {100000.00} cor = "Cinza"/>
     </>
   )
 }
