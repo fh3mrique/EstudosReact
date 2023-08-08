@@ -20,7 +20,6 @@ const  RenderizacaoCondicional = () => {
         ) : (<div>
             <p>Nome não encontrado</p>
         </div>)}
-
     </div>
   )
 }

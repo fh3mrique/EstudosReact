@@ -3,6 +3,7 @@ import './App.css'
 
 import kokouNoHitoImg from "./assets/kokou.jpg"
 import ManipularDados from './components/ManipularDados'
+import MostrarNomeUsuario from './components/MostrarNomeUsuario'
 import RenderLista from './components/RenderLista'
 import RenderizacaoCondicional from './components/RenderizacaoCondicional'
 
@@ -26,6 +27,7 @@ function App() {
       <ManipularDados/>
       <RenderLista/>
       <RenderizacaoCondicional/>
+      <MostrarNomeUsuario nome = "Filipe"/>
     </>
   )
 }
