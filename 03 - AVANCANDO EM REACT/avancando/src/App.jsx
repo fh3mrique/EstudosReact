@@ -32,6 +32,10 @@ function App() {
       <MostrarNomeUsuario nome = "Filipe"/>
       {/* Destructuring props */}
       <DetalhesCarro marca = "Dodge ram" preco = {100000.00} cor = "Cinza"/>
+      {/* Reaproveitamento de componentes */}
+      <DetalhesCarro marca = "HB20" preco = {100000.00} cor = "PRETO" carrroNovo = {false}/>
+      <DetalhesCarro marca = "RENEGADE" preco = {100000.00} cor = "CINZA" carrroNovo = {true}/>
+      <DetalhesCarro marca = "POLO" preco = {100000.00} cor = "BRANCO" carroNovo = {true}/>
     </>
   )
 }
