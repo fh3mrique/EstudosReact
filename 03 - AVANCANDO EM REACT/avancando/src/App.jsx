@@ -1,6 +1,7 @@
 import "./App.css";
 
 import kokouNoHitoImg from "./assets/kokou.jpg";
+import Container from "./components/Container";
 import DetalhesCarro from "./components/DetalhesCarro";
 import ManipularDados from "./components/ManipularDados";
 import MostrarNomeUsuario from "./components/MostrarNomeUsuario";
@@ -68,6 +69,11 @@ function App() {
           novo={smathPhone.novo}
         />
       ))}
+
+      {/* Children prop */}
+      <Container pc="Prop do componenete">
+        <h2>Este é o conteudo</h2>
+      </Container>
     </>
   );
 }
