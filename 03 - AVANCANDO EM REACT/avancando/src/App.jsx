@@ -3,6 +3,7 @@ import "./App.css";
 import kokouNoHitoImg from "./assets/kokou.jpg";
 import Container from "./components/Container";
 import DetalhesCarro from "./components/DetalhesCarro";
+import ExecutarFuncao from "./components/ExecutarFuncao";
 import ManipularDados from "./components/ManipularDados";
 import MostrarNomeUsuario from "./components/MostrarNomeUsuario";
 import RenderLista from "./components/RenderLista";
@@ -17,6 +18,10 @@ function App() {
     { modelo: "REDMI 9", marca: "XAOMI", preco: 4000, novo: true },
     { modelo: "PIXEL 4", marca: "GOOGLE", preco: 4000, novo: true },
   ];
+
+  function mostrarMensagem(){
+    alert("Você clicou no botao")
+  }
 
   return (
     <>
@@ -74,6 +79,9 @@ function App() {
       <Container pc="Prop do componenete">
         <h2>Este é o conteudo</h2>
       </Container>
+
+      {/* Função passada como prop */}
+      <ExecutarFuncao myFunction = {mostrarMensagem}/>
     </>
   );
 }
