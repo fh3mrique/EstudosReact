@@ -6,6 +6,11 @@ import MeuComponente from './components/MeuComponente'
 
 function App() {
 
+  const [condicional, setCondicional] = useState(true);
+  function handleCondicional(){
+       setCondicional(!condicional)
+  }
+
 
   return (
     <>
@@ -17,6 +22,12 @@ function App() {
 
       {/* CSS Inline */}
       <p style={{color: "white", background: "black"}}> esse elemento foi estilizado de forma inline</p>
+      
+      {/* CSS Inline dinâmico */}
+      <h2 style={condicional ? {color: "blue"}:{color: "pink"}}>CSS Inline dinâmico </h2>
+      <button onClick={handleCondicional}>mudar Estado</button>
+
+
     </>
   )
 }
