@@ -11,6 +11,8 @@ function App() {
        setCondicional(!condicional)
   }
 
+  const vermelho = false;
+
 
   return (
     <>
@@ -26,6 +28,9 @@ function App() {
       {/* CSS Inline dinâmico */}
       <h2 style={condicional ? {color: "blue"}:{color: "pink"}}>CSS Inline dinâmico </h2>
       <button onClick={handleCondicional}>mudar Estado</button>
+
+      {/* Classe dinâmica css */}
+      <h2 className={vermelho? "classe-vermelha" : "classe-normal"}>Classe dinâmica css</h2>
 
 
     </>
