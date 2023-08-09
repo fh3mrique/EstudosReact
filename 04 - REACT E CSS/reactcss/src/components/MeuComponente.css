@@ -1,0 +1,11 @@
+/*Essa estização será vazada para os componentes p de App.jsx*/
+p{
+    background-color: aquamarine;
+    color: white;
+}
+
+/* colocando classes nos componnetes resolve o problema */
+.my-comp-p{
+    background-color: chocolate;
+    color: aliceblue;
+}
