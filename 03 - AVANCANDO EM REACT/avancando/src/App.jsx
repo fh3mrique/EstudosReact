@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 import kokouNoHitoImg from "./assets/kokou.jpg";
@@ -9,6 +10,8 @@ import MostrarNomeUsuario from "./components/MostrarNomeUsuario";
 import RenderLista from "./components/RenderLista";
 import RenderizacaoCondicional from "./components/RenderizacaoCondicional";
 import SmathPhone from "./components/SmathPhone";
+import Mensagem from "./components/Mensagem";
+import MudaMensagewmState from "./components/MudaMensagewmState";
 
 function App() {
   /*Essa é a representação de uma lista de dados vindos de uma API */
@@ -21,6 +24,11 @@ function App() {
 
   function mostrarMensagem(){
     alert("Você clicou no botao")
+  }
+
+  const [mensagem, setMensagem] = useState("");
+  const manipularMensagem = (msg) =>{
+    setMensagem(msg)
   }
 
   return (
@@ -82,6 +90,10 @@ function App() {
 
       {/* Função passada como prop */}
       <ExecutarFuncao myFunction = {mostrarMensagem}/>
+
+      {/* State lift */}
+      <Mensagem msg={mensagem}/>
+      <MudaMensagewmState handleMessage ={manipularMensagem}/>
     </>
   );
 }
