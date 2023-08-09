@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import MeuComponente from './components/MeuComponente'
+import MeuBotao from './components/MeuBotao'
 
 function App() {
 
@@ -12,7 +11,6 @@ function App() {
   }
 
   const vermelho = false;
-
 
   return (
     <>
@@ -32,7 +30,8 @@ function App() {
       {/* Classe dinâmica css */}
       <h2 className={vermelho? "classe-vermelha" : "classe-normal"}>Classe dinâmica css</h2>
 
-
+      {/* CSS MODULES */}
+      <MeuBotao/>
     </>
   )
 }

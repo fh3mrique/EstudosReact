@@ -1,0 +1,12 @@
+.botao{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: lightpink;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold ;
+}
