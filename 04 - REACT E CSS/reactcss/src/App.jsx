@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>dncewoi</h1>
+      <h1>React com CSS</h1>
     </>
   )
 }
