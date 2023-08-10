@@ -12,6 +12,7 @@ const MeuForm = () => {
     }
 
     console.log(nome)
+    console.log(email)
   return (
     <div>
         {/* Criação de formúlario */}
@@ -24,7 +25,7 @@ const MeuForm = () => {
             {/* Label envolvendo e-mail */}
             <label>
                 <span>E-mail</span>
-                <input type="text" name='email' placeholder='Digite seu email' />
+                <input type="text" name='email' placeholder='Digite seu email' onChange={(e) => setEmail(e.target.value)}/>
             </label>
 
             <input type="submit" value= "enviar" />
