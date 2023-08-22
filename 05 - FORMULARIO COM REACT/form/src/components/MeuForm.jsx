@@ -9,6 +9,8 @@ const MeuForm = ({usuario}) => {
 
     const [bio, setBio] = useState("")
 
+    const [cargo, setCargo] = useState(usuario ? usuario.cargo : "");
+
     function handleName(e){
         setNome(e.target.value)
     }
@@ -23,7 +25,7 @@ const MeuForm = ({usuario}) => {
         permitindo personalizar as ações em vez de seguir as ações padrão do navegador. */
         evento.preventDefault()
         console.log("Enviando formulário")
-        console.log(nome, email, bio)
+        console.log(nome, email, bio, cargo)
 
         setNome("");
         setEmail("")
@@ -51,6 +53,16 @@ const MeuForm = ({usuario}) => {
             <label>
                 <span>bio</span>
                 <textarea name="bio" placeholder='descreva sua situação' value={bio} onChange={(e) => setBio(e.target.value)}></textarea>
+            </label>
+
+            {/* INPUT SELECT */}
+            <label>
+                <span>Cargo</span>
+                <select name="cargo" onChange={(e) => setCargo(e.target.value)} value={cargo}>
+                    <option value="user">Usuario</option>
+                    <option value="editor">Editor</option>
+                    <option value="admin">Admin</option>
+                </select>
             </label>
 
             <input type="submit" value= "enviar" />
