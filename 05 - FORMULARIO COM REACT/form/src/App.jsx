@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>Formulário com React</h1>
-      <MeuForm/>
+      <MeuForm usuario = {{nome: "Naruto", email: "naruto@gmail.com"}}/>
     </>
   )
 }
