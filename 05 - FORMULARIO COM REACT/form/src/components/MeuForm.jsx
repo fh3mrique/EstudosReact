@@ -22,6 +22,9 @@ const MeuForm = ({usuario}) => {
         evento.preventDefault()
         console.log("Enviando formulário")
         console.log(nome, email)
+
+        setNome("");
+        setEmail("")
     }
 
   return (
