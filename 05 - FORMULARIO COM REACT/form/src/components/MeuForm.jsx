@@ -7,6 +7,8 @@ const MeuForm = ({usuario}) => {
     const [nome, setNome] = useState( usuario ? usuario.nome : "") 
     const [email, setEmail] = useState(usuario ? usuario.email : "")
 
+    const [bio, setBio] = useState("")
+
     function handleName(e){
         setNome(e.target.value)
     }
@@ -21,7 +23,7 @@ const MeuForm = ({usuario}) => {
         permitindo personalizar as ações em vez de seguir as ações padrão do navegador. */
         evento.preventDefault()
         console.log("Enviando formulário")
-        console.log(nome, email)
+        console.log(nome, email, bio)
 
         setNome("");
         setEmail("")
@@ -42,6 +44,13 @@ const MeuForm = ({usuario}) => {
                 <span>E-mail</span>
                 {/* 3 - Simplificando com evento com função inline */}
                 <input type="text" name='email' placeholder='Digite seu email' onChange={(e) => setEmail(e.target.value)} value={email}/>
+            </label>
+
+
+            {/* TEXTAREA */}
+            <label>
+                <span>bio</span>
+                <textarea name="bio" placeholder='descreva sua situação' value={bio} onChange={(e) => setBio(e.target.value)}></textarea>
             </label>
 
             <input type="submit" value= "enviar" />
