@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 import './App.css'
+import TelaInicial from './components/TelaInicial'
 
 function App() {
 
   return (
     <div className='App'>
-      <h2>Secret word</h2>
+      <TelaInicial/>
         
     </div>
   )
