@@ -76,9 +76,6 @@ function App() {
     return {palavra, categoria}
   }
 
-
-
-
   return (
     <div className='App'>
       {gameStage === 'inicio' && <TelaInicial iniciarGame = {iniciarGame}/>}
