@@ -22,8 +22,12 @@ function App() {
 
   const [palavraSelecionada, setPalavraSelecionada] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
-  
   const [letras, setLetras] = useState([]);
+
+  const [letrasTentativas, setLetrasTentativas] = useState([]);
+  const [letrasErradas, setLetrasErradas] = useState([]); 
+  const [tentativas, setTentativas] = useState(3); 
+  const [score, setScore] = useState(0); 
 
   //Função que inicia o game
   const iniciarGame = () =>{
@@ -41,7 +45,7 @@ function App() {
    //Preenchendo states
    setPalavraSelecionada(palavra);
    setCategoriaSelecionada(categoria);
-   setLetras(letras)
+   setLetras(palavraLetras)
 
     setGameStage(stages[1].nome)
   }
@@ -79,7 +83,18 @@ function App() {
   return (
     <div className='App'>
       {gameStage === 'inicio' && <TelaInicial iniciarGame = {iniciarGame}/>}
-      {gameStage === 'game' && <Game verificaLetra = {verificaLetra}/>}
+      {gameStage === 'game' && (
+      <Game 
+      verificaLetra = {verificaLetra} 
+      palavraSelecionada={palavraSelecionada} 
+      categoriaSelecionada={categoriaSelecionada} 
+      letras={letras}
+      letrasTentativas={letrasTentativas}
+      letrasErradas={letrasErradas}
+      tentativas={tentativas}
+      score={score}
+      />
+      )}
       {gameStage === 'fim' && <GameOver restartGame = {restartGame}/>}        
     </div>
   )
