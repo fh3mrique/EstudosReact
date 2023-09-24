@@ -20,15 +20,27 @@ function App() {
   const [gameStage, setGameStage] = useState(stages[0].nome);
   const [palavras] = useState(wordsList);
 
+  //Função que inicia o game
   const iniciarGame = () =>{
     setGameStage(stages[1].nome)
   }
 
+  //Função Processa o input da letra
+  const verificaLetra = () =>{
+    setGameStage(stages[2].nome)
+  }
+
+  //Função que reinicia o game
+  const restartGame = () =>{
+    setGameStage(stages[0].nome)
+  }
+
+
   return (
     <div className='App'>
       {gameStage === 'inicio' && <TelaInicial iniciarGame = {iniciarGame}/>}
-      {gameStage === 'game' && <Game/>}
-      {gameStage === 'fim' && <GameOver/>}        
+      {gameStage === 'game' && <Game verificaLetra = {verificaLetra}/>}
+      {gameStage === 'fim' && <GameOver restartGame = {restartGame}/>}        
     </div>
   )
 }
