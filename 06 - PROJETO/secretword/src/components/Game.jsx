@@ -3,7 +3,7 @@ import "./Game.css"
 const Game = () =>  {
   return (
     <div>
-        
+        game
     </div>
   )
 }

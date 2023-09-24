@@ -20,11 +20,13 @@ function App() {
   const [gameStage, setGameStage] = useState(stages[0].nome);
   const [palavras] = useState(wordsList);
 
-  console.log(palavras)
+  const iniciarGame = () =>{
+    setGameStage(stages[1].nome)
+  }
 
   return (
     <div className='App'>
-      {gameStage === 'inicio' && <TelaInicial/>}
+      {gameStage === 'inicio' && <TelaInicial iniciarGame = {iniciarGame}/>}
       {gameStage === 'game' && <Game/>}
       {gameStage === 'fim' && <GameOver/>}        
     </div>
