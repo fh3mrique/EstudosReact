@@ -1,3 +1,4 @@
+import { useState, useRef } from "react"
 import "./Game.css"
 
 const Game = ({
@@ -10,7 +11,21 @@ const Game = ({
   tentativas,
   score
  }) =>  {
+  const [letra, setLetra] = useState("");
+  const letraInputRef = useRef(null)
+  
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+
+    verificaLetra(letra)
+
+    setLetra("")
+
+    letraInputRef.current.focus();
+  }
+
   return (
+
     <div className="game">
       <p className="pontos">
         <span>Pontução: {score}</span>
@@ -35,8 +50,14 @@ const Game = ({
       </div>
       <div className="letraContainer">
         <p>Tente advinhar uma letra da palavra:</p>
-        <form>
-          <input type="text" name="letra" maxLength="1" required />
+        <form onSubmit={handleSubmit}>
+          <input type="text" 
+          name="letra" 
+          maxLength="1" 
+          required 
+          onChange={(e) => setLetra(e.target.value)}
+          value={letra} 
+          ref={letraInputRef}/>
           <button>Jogar!</button>
         </form>
       </div>

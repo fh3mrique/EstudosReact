@@ -51,8 +51,9 @@ function App() {
   }
 
   //Função Processa o input da letra
-  const verificaLetra = () =>{
-    setGameStage(stages[2].nome)
+  const verificaLetra = (letra) =>{
+
+    console.log(letra)
   }
 
   //Função que reinicia o game
